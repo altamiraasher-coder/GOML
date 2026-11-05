@@ -4,21 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GOML - Get On My Level</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="#">
-                <strong>GOML </strong> (Get On My Level)
+                <strong>GOML</strong> (Get On My Level)
             </a>
         </div>
     </nav>
 
     <section class="section">
         <div class="container">
-            <h1 class="title">Gestor de Torneos</h1>
-            <p class="subtitle"> Welcome.</p>
+            <h1 class="title has-text-centered">Gestión de Torneos GOML</h1>
+            <p class="subtitle has-text-centered">Plataforma oficial para competir al máximo nivel.</p>
+
+            <div class="columns">
+            
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h2 class="title is-4">Crear Torneo</h2>
+                        <form id="form-torneo">
+                            <div class="field">
+                                <label class="label">Nombre del Juego</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="nombre-juego" placeholder="Ej. Street Fighter 6">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Modalidad</label>
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select id="modalidad">
+                                            <option>1v1 (Eliminación directa)</option>
+                                            <option>Todos contra todos</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="button is-primary is-fullwidth">Guardar Torneo</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h2 class="title is-4">Torneos Activos</h2>
+                    <div id="contenedor-torneos" class="columns is-multiline">
+                    
+                        <div class="column is-half">
+                            <div class="card">
+                                <div class="card-content">
+                                    <p class="title is-5">Tekken 8 - Showdown</p>
+                                    <p class="subtitle is-6">Modalidad: 1v1</p>
+                                    <span class="tag is-success">En Curso</span>
+                                </div>
+                                <footer class="card-footer">
+                                    <a href="#" class="card-footer-item">Inscribirse</a>
+                                    <a href="#" class="card-footer-item">Ver Detalles</a>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
